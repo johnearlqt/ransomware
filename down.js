@@ -14,11 +14,11 @@ app.get('/', (req, res) => {
 
 // Handle file download request
 app.get('/download', (req, res) => {
-  const filePath = 'encrypter.exe';
+  const filePath = 'encryption.exe';
 
   console.log(`Attempting to download file from: ${filePath}`);
 
-  res.download(filePath, 'encrypter.exe', (err) => {
+  res.download(filePath, 'encryption.exe', (err) => {
     if (err) {
       console.error(`Error downloading file: ${err.message}`);
       res.status(500).send(`Error downloading file: ${err.message}`);
